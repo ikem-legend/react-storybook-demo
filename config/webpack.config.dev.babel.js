@@ -1,15 +1,20 @@
 // Import webpack
-import webpack from 'webpack';
+const webpack = require('webpack');
+// import webpack from 'webpack';
 
 // Import webpack plugins
-import { merge as webpackMerge } from 'webpack-merge';
+const { merge: webpackMerge } = require('webpack-merge');
+// import { merge as webpackMerge } from 'webpack-merge';
 
 // Import common configuration
-import baseConfig from './webpack.config.base.babel';
+const baseConfig = require('./webpack.config.base.babel');
+// import baseConfig from './webpack.config.base.babel';
 
-import { paths } from './paths';
+const { paths } = require('./paths');
+// import { paths } from './paths';
 
-export default webpackMerge(baseConfig, {
+// export default webpackMerge(baseConfig, {
+module.exports = webpackMerge(baseConfig, {
   mode: 'development',
 
   // Control how source maps are generated
@@ -35,7 +40,7 @@ export default webpackMerge(baseConfig, {
     rules: [
       // Styles: Inject CSS into the head with source maps
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.css$/,
         use: [
           {
             loader: 'style-loader',
@@ -43,14 +48,7 @@ export default webpackMerge(baseConfig, {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
               modules: true,
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
             },
           },
         ],

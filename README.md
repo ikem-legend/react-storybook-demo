@@ -8,7 +8,6 @@ Simple Webpack 5 React Starter. It contains:
 - [x] [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement)
 - [x] Production config
 - [x] Export separate vendor and runtime files
-- [x] Sass/SCSS support
 - [x] Separate CSS stylesheets generation
 - [x] ES6 linting with continuous linting on file change
 - [x] Stylelint

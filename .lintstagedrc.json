@@ -1,4 +1,4 @@
 {
   "src/**/*.+(js|jsx)": ["eslint --fix", "prettier --write", "git add"],
-  "src/**/*.scss": ["stylelint --syntax scss --fix", "git add"]
+  "src/**/*.css": ["stylelint --syntax css --fix", "git add"]
 }

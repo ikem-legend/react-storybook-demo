@@ -1,19 +1,24 @@
 // Import Node packages
-import path from 'path';
+const path = require('path');
+// import path from 'path';
 
 // Import webpack plugins
-import WebpackNotifierPlugin from 'webpack-notifier';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const WebpackNotifierPlugin = require('webpack-notifier');
+// import WebpackNotifierPlugin from 'webpack-notifier';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 // Import paths
-import { paths } from './paths';
+const { paths } = require('./paths');
+// import { paths } from './paths';
 
 // Import package.json
-import PKG from '../package.json';
+const PKG = require('../package.json');
+// import PKG from '../package.json';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-export default {
+module.exports = {
   target: 'web',
   // The base directory for resolving `entry`
   context: paths.src,

@@ -1,6 +1,7 @@
-import path from 'path';
+const path = require('path');
+// import path from 'path';
 
-export const paths = {
+module.exports.paths = {
   // Root folder
   root: path.resolve(__dirname, '..'),
 
